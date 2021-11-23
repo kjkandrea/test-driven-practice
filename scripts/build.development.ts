@@ -32,6 +32,12 @@ const buildOptions: BuildOptions = {
 	outdir,
 	target: ["chrome58", "firefox57", "safari11", "edge16"],
 	sourcemap: true,
+	watch: {
+		onRebuild(error) {
+			if (error) console.error("watch build failed:", error);
+			else console.log("watch build succeeded.");
+		},
+	},
 	define: {
 		"process.env.NODE_ENV": `"development"`,
 	},
