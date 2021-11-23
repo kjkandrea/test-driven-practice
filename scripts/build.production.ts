@@ -1,6 +1,6 @@
-import {build, BuildOptions} from 'esbuild'
-import path from 'path'
-import fs from 'fs'
+import { build, BuildOptions } from 'esbuild';
+import path from 'path';
+import fs from 'fs';
 
 const template = (bundleName: string) => `<!DOCTYPE html>
 <html lang="ko">
@@ -20,25 +20,22 @@ const template = (bundleName: string) => `<!DOCTYPE html>
 
 const outdir = path.resolve(__dirname, '..', 'dist');
 
-fs.writeFileSync(
-	path.resolve(outdir, "./index.html"),
-	template("./index")
-);
+fs.writeFileSync(path.resolve(outdir, './index.html'), template('./index'));
 
 // es-build option
 const buildOptions: BuildOptions = {
-	bundle: true,
-	entryPoints: [path.resolve(__dirname, '..', 'src/index.tsx')],
-	outdir,
-	target: ["chrome58", "firefox57", "safari11", "edge16"],
-	minify: true,
-	sourcemap: false,
-	define: {
-		"process.env.NODE_ENV": `"production"`,
-	},
-	loader: {
-		'.gif': 'file'
-	}
+  bundle: true,
+  entryPoints: [path.resolve(__dirname, '..', 'src/index.tsx')],
+  outdir,
+  target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
+  minify: true,
+  sourcemap: false,
+  define: {
+    'process.env.NODE_ENV': `"production"`,
+  },
+  loader: {
+    '.gif': 'file',
+  },
 };
 
 build(buildOptions).catch(() => process.exit(1));
