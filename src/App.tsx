@@ -3,6 +3,7 @@ import emoji from './shopby-emoji.gif';
 import 'reset-css/reset.css';
 import './assets/scss/style.scss'
 import styled from 'styled-components';
+import AreYouReadyCheckBox from "./components/AreYouReadyCheckBox";
 
 const Styled = styled.div`
   code {
@@ -63,6 +64,7 @@ const App = () => {
             https://github.nhnent.com/ncp/react-boilerplate
           </a>
         </p>
+        <AreYouReadyCheckBox />
       </header>
     </Styled>
   );

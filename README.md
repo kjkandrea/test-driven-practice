@@ -1,6 +1,6 @@
 # React boilerplate
 
-![logo](./src/shopby-emoji.gif)
+![logo](src/shopby-hacker.gif)
 
 react-boilerplate 는 사내 향후 React 프로젝트에서 셋업을 간편하게 하고자 만들어졌습니다.
 
