@@ -7,7 +7,7 @@
     "dev": "ts-node --transpile-only scripts/build.development.ts",
     "build": "ts-node --transpile-only scripts/build.production.ts",
     "serve": "lite-server --baseDir='dist'",
-    "lint": "eslint --fix --ext .ts,.tsx .",
+    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx .",
     "test": "jest --watchAll",
     "coverage": "jest --coverage"
   },
