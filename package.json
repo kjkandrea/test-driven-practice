@@ -14,6 +14,7 @@
   "author": "jk kim",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.9",
     "@types/react": "^17.0.36",
@@ -27,6 +28,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.3.1",
+    "jest-dom": "^4.0.0",
+    "jest-transform-stub": "^2.0.0",
     "lite-server": "^2.6.1",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
