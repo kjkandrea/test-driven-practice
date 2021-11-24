@@ -28,7 +28,7 @@ const buildOptions: BuildOptions = {
   bundle: true,
   entryPoints: [path.resolve(__dirname, '..', 'src/index.tsx')],
   outdir,
-  target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
+  target: ['chrome58', 'firefox57', 'safari11', 'edge18'],
   sourcemap: true,
   watch: {
     onRebuild(error) {
