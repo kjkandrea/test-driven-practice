@@ -17,7 +17,7 @@ yarn dev
 esbuild 가 준비되었다면, 다음 명령어를 통해 런타임 실행이 가능합니다.
 
 ```
-yarn start
+yarn serve
 ```
 
 ### build
