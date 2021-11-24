@@ -14,6 +14,7 @@
   "author": "jk kim",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^27.0.3",
     "@types/node": "^16.11.9",
     "@types/react": "^17.0.36",
     "@types/react-dom": "^17.0.11",
@@ -29,6 +30,7 @@
     "lite-server": "^2.6.1",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
+    "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.2"
   },
