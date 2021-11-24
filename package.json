@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node --transpile-only scripts/build.development.ts",
     "build": "ts-node --transpile-only scripts/build.production.ts",
-    "serve": "lite-server --baseDir='dist'"
+    "serve": "lite-server --baseDir='dist'",
+    "lint": "eslint --fix --ext .ts,.tsx ."
   },
   "author": "jk kim",
   "license": "ISC",
@@ -15,8 +16,14 @@
     "@types/react": "^17.0.36",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.15",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "esbuild": "^0.13.15",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "lite-server": "^2.6.1",
+    "prettier": "^2.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.2"
   },
