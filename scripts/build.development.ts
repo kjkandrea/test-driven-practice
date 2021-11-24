@@ -1,6 +1,7 @@
 import { build, BuildOptions } from 'esbuild';
 import path from 'path';
 import fs from 'fs';
+import {sassPlugin} from "esbuild-sass-plugin";
 
 const template = (bundleName: string) => `<!DOCTYPE html>
 <html lang="ko">
@@ -41,6 +42,7 @@ const buildOptions: BuildOptions = {
   loader: {
     '.gif': 'file',
   },
+  plugins: [sassPlugin()]
 };
 
 build(buildOptions).catch(() => process.exit(1));
