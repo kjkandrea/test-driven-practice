@@ -26,7 +26,7 @@ describe('List', () => {
 
       fireEvent.click(buttons[0])
 
-      expect(handleClick).toBeCalled()
+      expect(handleClick).toBeCalledWith(1)
     });
   })
 
