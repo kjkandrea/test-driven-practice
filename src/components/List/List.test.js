@@ -4,8 +4,10 @@ import List from './List';
 import tasks from '../../../fixtures/tasks';
 
 describe('List', () => {
+  const handleClick = jest.fn()
+
   const  renderList = tasks => render(
-    (<List tasks={tasks} />),
+    (<List tasks={tasks} onClick={handleClick} />),
   );
 
   // 테스트가 주어지는 상황
@@ -18,8 +20,6 @@ describe('List', () => {
     });
 
     it('render "완료" button to delete a task', () => {
-      const handleClick = jest.fn()
-
       const { getAllByText } = renderList(tasks)
 
       const buttons = getAllByText('완료')

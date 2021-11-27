@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { Task } from '../../types/task';
 
 interface ListProps {
-  tasks: Task[]
+  tasks: Task[],
+  onClick: MouseEventHandler
 }
 
-const List: React.FC<ListProps> = ({ tasks }) => {
+const List: React.FC<ListProps> = ({ tasks, onClick }) => {
   if (tasks.length < 1) {
     return <p>Dobby is free.</p>
   }
@@ -15,7 +16,7 @@ const List: React.FC<ListProps> = ({ tasks }) => {
       {tasks.map(task =>
         <li key={task.id}>
           {task.title}
-          <button>완료</button>
+          <button onClick={onClick}>완료</button>
         </li>
       )}
     </ul>
