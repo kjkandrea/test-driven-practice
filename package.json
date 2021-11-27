@@ -15,6 +15,7 @@
   "author": "jk kim",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.9",
@@ -31,7 +32,6 @@
     "jest": "^27.3.1",
     "jest-dom": "^4.0.0",
     "jest-transform-stub": "^2.0.0",
-    "lint-staged": "^12.1.2",
     "lite-server": "^2.6.1",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
@@ -47,11 +47,6 @@
     "styled-components": "^5.3.3"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix"
-    ]
+    "pre-commit": "echo 'Where the hell my homies went?'"
   }
 }
