@@ -1,9 +1,14 @@
 import React from 'react';
+import { Task } from '../types/todo';
 
-const List = () => {
+interface ListProps {
+  tasks: Task[]
+}
+
+const List: React.FC<ListProps> = ({ tasks }) => {
   return (
     <ul>
-        <li>Where the hell my homies went?</li>
+      {tasks.map(task => <li key={task.id}>{task.title}</li>)}
     </ul>
   );
 };
