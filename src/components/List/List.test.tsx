@@ -3,7 +3,7 @@ import React from 'react'
 import '@testing-library/jest-dom/extend-expect';
 
 import List from './List';
-import { tasks } from '../store/task';
+import { tasks } from '../../store/task';
 
 describe('List', () => {
   it('render tasks', () => {

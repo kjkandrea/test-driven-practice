@@ -1,5 +1,5 @@
 import React from 'react';
-import { Task } from '../types/todo';
+import { Task } from '../../types/task';
 
 interface ListProps {
   tasks: Task[]

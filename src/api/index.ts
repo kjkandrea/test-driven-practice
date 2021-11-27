@@ -1,6 +1,6 @@
+import { Task } from '../types/task';
+
 const dataLocation = './tasks.json'
 
-const fetchTasks = () => fetch(dataLocation)
+export const fetchTasks = (): Promise<Task[]> => fetch(dataLocation)
   .then(res => res.json())
-
-export default fetchTasks;

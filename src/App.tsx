@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import emoji from './shopby-emoji.gif';
 import 'reset-css/reset.css';
 import './assets/scss/style.scss'
 import styled from 'styled-components';
-import List from './components/List';
-import { tasks } from './store/task';
+import ListContainer from './components/List/ListContainer';
+import { useDispatch } from 'react-redux';
+import { loadTasks } from './store/tasks/actions';
 
 const Styled = styled.div`
   code {
@@ -50,13 +51,20 @@ const Styled = styled.div`
 `;
 
 const App = () => {
+  const dispatch = useDispatch();
+  // TODO: 초기실행
+  // store tasks에 데이터 넣기 => dispatch 이용
+  useEffect(() => {
+    dispatch(loadTasks());
+  }, []);
+
   return (
     <Styled>
       <header>
         <div className="logo-area">
           <img src={emoji} className="logo" alt="logo" />
         </div>
-        <List tasks={tasks} />
+        <ListContainer />
       </header>
     </Styled>
   );
