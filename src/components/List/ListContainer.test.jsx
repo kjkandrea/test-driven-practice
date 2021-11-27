@@ -25,7 +25,10 @@ describe('ListContainer', () => {
 
     fireEvent.click(buttons[0])
 
-    expect(dispatch).toBeCalled()
+    expect(dispatch).toBeCalledWith({
+      type: 'deleteTask',
+      payload: { id : 1 }
+    })
 
     expect(container).toHaveTextContent('Where the hell my homies went?')
     expect(container).toHaveTextContent('Looking around like where my phone?')
