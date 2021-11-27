@@ -19,3 +19,12 @@ export function loadTasks() {
     dispatch(setTasks(tasks.slice(0, 10)));
   };
 }
+
+export function deleteTask(id: number) {
+  return {
+    type: 'deleteTask',
+    payload: {
+      id
+    }
+  }
+}

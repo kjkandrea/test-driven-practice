@@ -8,6 +8,8 @@ import { useDispatch } from '../../../__mocks__/react-redux';
 jest.mock('react-redux')
 
 describe('ListContainer', () => {
+  const dispatch = jest.fn()
+
   useDispatch.mockImplementation(() => dispatch)
 
   useSelector.mockImplementation((selector) => selector({
