@@ -12,7 +12,12 @@ const List: React.FC<ListProps> = ({ tasks }) => {
 
   return (
     <ul>
-      {tasks.map(task => <li key={task.id}>{task.title}</li>)}
+      {tasks.map(task =>
+        <li key={task.id}>
+          {task.title}
+          <button>완료</button>
+        </li>
+      )}
     </ul>
   );
 };
