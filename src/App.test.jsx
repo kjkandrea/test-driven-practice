@@ -1,12 +1,16 @@
 import { render } from '@testing-library/react';
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import tasks from '../fixtures/tasks';
 import App from './App';
 
 jest.mock('react-redux')
 
 describe('App', () => {
+  const dispatch = jest.fn()
+
+  useDispatch.mockImplementation(() => dispatch)
+
   useSelector.mockImplementation((selector) => selector({
     tasks
   }))

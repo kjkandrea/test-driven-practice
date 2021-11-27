@@ -51,12 +51,12 @@ const Styled = styled.div`
 `;
 
 const App = () => {
-  // const dispatch = useDispatch();
-  // // TODO: 초기실행
-  // // store tasks에 데이터 넣기 => dispatch 이용
-  // useEffect(() => {
-  //   dispatch(loadTasks());
-  // }, []);
+  const dispatch = useDispatch();
+  // TODO: 초기실행
+  // store tasks에 데이터 넣기 => dispatch 이용
+  useEffect(() => {
+    dispatch(loadTasks());
+  }, []);
 
   return (
     <Styled>
