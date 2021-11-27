@@ -10,7 +10,23 @@
 다른 부문이 변하는 것에도 신경 쓸 필요가 없어지는 장점이 있습니다.
 
 React 의 관심사 : State Reflection 
+Redux 의 관심사 : 상태 변경
 
+## 내 실무에선 어떻게?
+
+red => green => refactor => red => green => refactor => ... 
+
+1. rxjs 데이터스트림 구현하기전에 rxjs test 작성 (ts로 하다보니 겁나 짜증남)
+2. rxjs 구현
+
+* 테스트코드에 type 신경쓰기 싫으니깐 js로 작성
+* `mockImplementation`, `jest.fn()` 적극 활용
+* 실제 request 날리지말고 학습한것처럼 mock 으로 테스트
+
+그리고 실습에서 Container(Model 과 View 이어주는 Controller 역할) 만든것처럼
+프레젠테이션 컴포넌트랑 관심사 분리 가능할지 고민. 
+
+테스트는 전부 한글로 작성 ( 우리 팀이 볼꺼니깐 보기 쉽게, 나도 작성하기 쉽게 )
 
 ## start
 
