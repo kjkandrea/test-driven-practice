@@ -8,4 +8,9 @@ module.exports = {
   moduleNameMapper: {
     '^.+.(css|styl|less|sass|scss|png|jpg|gif|ttf|woff|woff2)$': "jest-transform-stub",
   },
+  setupFilesAfterEnv: [
+    'jest-plugin-context/setup',
+    './jest.setup',
+  ],
+  verbose: true,
 };

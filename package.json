@@ -31,6 +31,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.3.1",
     "jest-dom": "^4.0.0",
+    "jest-plugin-context": "^2.9.0",
     "jest-transform-stub": "^2.0.0",
     "lite-server": "^2.6.1",
     "prettier": "^2.4.1",
