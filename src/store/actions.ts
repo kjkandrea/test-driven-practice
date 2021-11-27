@@ -1,7 +1,7 @@
 import {
   fetchTasks,
-} from '../../api';
-import { Task } from '../../types/task';
+} from '../api';
+import { Task } from '../types/task';
 import { Dispatch } from 'redux';
 
 export function setTasks(tasks: Task[]) {

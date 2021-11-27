@@ -5,7 +5,7 @@ import './assets/scss/style.scss'
 import styled from 'styled-components';
 import ListContainer from './components/List/ListContainer';
 import { useDispatch } from 'react-redux';
-import { loadTasks } from './store/tasks/actions';
+import { loadTasks } from './store/actions';
 
 const Styled = styled.div`
   code {
