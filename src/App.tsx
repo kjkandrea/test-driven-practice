@@ -3,7 +3,6 @@ import emoji from './shopby-emoji.gif';
 import 'reset-css/reset.css';
 import './assets/scss/style.scss'
 import styled from 'styled-components';
-import AreYouReadyCheckBox from "./components/AreYouReadyCheckBox";
 
 const Styled = styled.div`
   code {
@@ -55,16 +54,7 @@ const App = () => {
         <div className="logo-area">
           <img src={emoji} className="logo" alt="logo" />
         </div>
-        <h1>NHN Commerce React boilerplate</h1>
-        <p>
-          <code>react + typescript + es-build</code>
-        </p>
-        <p>
-          <a href="https://github.nhnent.com/ncp/react-boilerplate" target="_blank">
-            https://github.nhnent.com/ncp/react-boilerplate
-          </a>
-        </p>
-        <AreYouReadyCheckBox />
+        <h1>Where the hell my homies went?</h1>
       </header>
     </Styled>
   );
