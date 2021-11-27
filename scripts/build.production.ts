@@ -20,7 +20,9 @@ const template = (bundleName: string) => `<!DOCTYPE html>
 `;
 
 const outdir = path.resolve(__dirname, '..', 'dist');
+const fixturesDir = path.resolve(__dirname, '..', 'fixtures');
 
+fs.copyFile(path.resolve(fixturesDir, './tasks.json'), path.resolve(outdir, './tasks.json'), err => err && console.error(err));
 fs.writeFileSync(path.resolve(outdir, './index.html'), template('./index'));
 
 // es-build option
