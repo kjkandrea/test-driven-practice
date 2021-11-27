@@ -3,6 +3,7 @@ import emoji from './shopby-emoji.gif';
 import 'reset-css/reset.css';
 import './assets/scss/style.scss'
 import styled from 'styled-components';
+import List from './components/List';
 
 const Styled = styled.div`
   code {
@@ -54,7 +55,7 @@ const App = () => {
         <div className="logo-area">
           <img src={emoji} className="logo" alt="logo" />
         </div>
-        <h1>Where the hell my homies went?</h1>
+        <List />
       </header>
     </Styled>
   );
