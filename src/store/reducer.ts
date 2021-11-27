@@ -7,9 +7,10 @@ const initialState = {
 };
 
 interface IAction {
-  type: 'setTasks',
+  type: 'setTasks'|'deleteTask',
   payload: {
-    tasks: Task[]
+    tasks: Task[],
+    id: number
   }
 }
 
@@ -20,6 +21,13 @@ export default function reducer(state: { tasks: Task[] } = initialState, action:
       ...state,
       tasks,
     };
+  }
+
+  if (action.type === 'deleteTask') {
+    return {
+      ...state,
+      tasks: state.tasks.filter(task => task.id !== action.payload.id)
+    }
   }
 
   return state;
