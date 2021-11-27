@@ -6,6 +6,10 @@ interface ListProps {
 }
 
 const List: React.FC<ListProps> = ({ tasks }) => {
+  if (tasks.length < 1) {
+    return <p>Dobby is free.</p>
+  }
+
   return (
     <ul>
       {tasks.map(task => <li key={task.id}>{task.title}</li>)}
