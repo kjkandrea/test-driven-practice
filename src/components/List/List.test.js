@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import React from 'react'
 import List from './List';
 import tasks from '../../../fixtures/tasks';
@@ -13,6 +13,16 @@ describe('List', () => {
 
       expect(container).toHaveTextContent('Where the hell my homies went?')
       expect(container).toHaveTextContent('Looking around like where my phone?')
+    });
+
+    it('render "완료" button to delete a task', () => {
+      const { getAllByText } = render(
+        (<List tasks={tasks} />),
+      );
+
+      const buttons = getAllByText('완료')
+
+      fireEvent.click(buttons[0])
     });
   })
 
