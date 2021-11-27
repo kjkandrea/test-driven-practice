@@ -12,6 +12,8 @@
 React 의 관심사 : State Reflection 
 Redux 의 관심사 : 상태 변경
 
+React 가 상태 변경을 다이렉트로 감지해야 할까? No. Container 를 두면 된다!
+
 ## 내 실무에선 어떻게?
 
 red => green => refactor => red => green => refactor => ... 
@@ -27,6 +29,13 @@ red => green => refactor => red => green => refactor => ...
 프레젠테이션 컴포넌트랑 관심사 분리 가능할지 고민. 
 
 테스트는 전부 한글로 작성 ( 우리 팀이 볼꺼니깐 보기 쉽게, 나도 작성하기 쉽게 )
+
+## Test Code 는 뭘까?
+
+TDD 는 만능이 아니다!!
+
+* 지뢰 탐지기
+* 과감한 리팩토링 도우미
 
 ## start
 
