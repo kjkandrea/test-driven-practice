@@ -16,6 +16,8 @@ describe('List', () => {
     });
 
     it('render "완료" button to delete a task', () => {
+      const handleClick = jest.fn()
+
       const { getAllByText } = render(
         (<List tasks={tasks} />),
       );
@@ -23,6 +25,8 @@ describe('List', () => {
       const buttons = getAllByText('완료')
 
       fireEvent.click(buttons[0])
+
+      expect(handleClick).toBeCalled()
     });
   })
 
